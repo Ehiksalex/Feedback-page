@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #eee;
+}
+.container{
+    width: 90%;
+    height: 100vh;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container aside{
+    width: 25%;
+    height: 100%;
+}
+.container aside .box{
+    width:100%;
+    height: 200px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.container aside .box.box1{
+    background-image: linear-gradient(40deg, blue, purple, orange);
+    color:#fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container aside .box.box1 h3{
+    margin-bottom: 5px;
+}
+.container aside .box.box2{
+    padding: 20px;
+}
+.container aside .box.box2 span{
+    background-color: #d1d1fc;
+    padding:10px 20px;
+    display: inline-block;
+    color: #0505e2;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.container aside .box.box2 span.active{
+    background-color: blue;
+    color: #fff;
+}
+.container aside .box.box3{
+    padding: 20px;
+}
+.container aside .box.box3 .road{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container aside .box.box3 .planned{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.container aside .box.box3 .planned .signed{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+.container aside .box.box3 .planned .signed .bullet{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display:block;
+}
+.container aside .box.box3 .planned .signed .bullet.purple{
+    background-color: purple;
+}
+.container aside .box.box3 .planned .signed .bullet.green{
+    background-color: green;
+}
+.container aside .box.box3 .planned .signed p{
+    width: 80%;
+}
+
+
+
+/* MAIN */
+
+
+.container main{
+    width: 70%;
+    height: 100%;
+}
+.container main .box{
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.container main .box.box1{
+    background-color: #290558;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.container main .box.box1 .suggest,
+.container main .box.box1 .sort{
+    color: #fff;
+}
+.container main .box.box1 .feedback a{
+    background-color: purple;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container main .box.box2{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.container main .box.box2 .solutions{
+    width: 50%;
+    display:flex;
+    justify-content:space-between;
+}
+.container main .box.box2 .solutions .tag{
+    background-color: #dcdfee;
+    color: #0000b6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 7px;
+    height: fit-content;
+}
+.container main .box.box2 .solutions .tag .icon p{
+    color: #28015a;
+    font-weight: bold;
+}
+.container main .box.box2 .solutions .tag .icon{
+    color: #0000b6;
+    font-weight: bold;
+}
+.container main .box.box2 .solutions .add h2,
+.container main .box.box2 .solutions .add p{
+    margin-bottom: 7px;
+}
+.container main .box.box2 .solutions .add a{
+    background-color: #d1d1fc;
+    padding:10px 20px;
+    display: inline-block;
+    color: #0000b6;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.container main .box.box2 .message{
+    display: flex;
+    align-items: center;
+}
+
+
+/* MEDIA QUERRY */
+@media screen and (max-width:1024px) {
+    .container{
+        width: 95%;
+        flex-direction: column;
+    }
+    .container main{
+        width: 100%;
+    }
+    .container aside{
+        width: 100%;
+    }
+}
+@media screen and (max-width:414px) {
+    .container{
+        width: 95%;
+        flex-direction: column;
+    }
+    .container main{
+        width: 100%;
+    }
+    .container aside{
+        width: 100%;
+    }
+    .container main .box.box1{
+        flex-wrap: wrap;
+    }
+    .container main .box.box1 .feedback a{
+        padding: 10px 15px;
+    }
+}
